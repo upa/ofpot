@@ -1,0 +1,23 @@
+#!/bin/sh
+
+OFPOT_CONTROL_PORT=60003
+
+if [ -z "$1" ]; then
+	echo
+	echo " OpenFlow Honeypot Control Command"
+	echo
+	echo "  ctlofpot [Command] ([argument])"
+	echo
+	echo "  show-information            : print basic information"
+	echo "  show-fdb-table              : print Forwarding Data Base"
+	echo "  show-arp-table              : print ARP table"
+	echo "  set-honeypot-port [PortNum] : set output port to Honeypot"
+	echo "  set-honeypot-mac  [MacAddr] : set Mac address of Honeypot node"
+	echo "  set-own-prefix    [Prefix]  : set local IP address prefix"
+	echo "  set-virtual-mac   [MacAddr] : set Virtual Mac Address"
+	echo "  set-router-mac    [MacAddr] : set Mac address of Default Router"
+	echo    
+else
+	echo $1 $2 | nc 127.0.0.1 ${OFPOT_CONTROL_PORT}
+
+fi
