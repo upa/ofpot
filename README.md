@@ -4,9 +4,8 @@ OFPOT
 OpenFlow HoneyPot (ofpot) is an OpenFlow application running on POX 
 (http://www.noxrepo.org/pox/about-pox/).
 ofpot detects unused IP addresses with arp snooping,
-and twist the flow from atacker to unused IP address to 
+and twists the flow from internet nodes to unused IP addresses to 
 specified HoneyPot using destination mac address swap.
-
 
 	 
 	 % git clone git://github.com/noxrepo/pox.git
@@ -32,4 +31,4 @@ specified HoneyPot using destination mac address swap.
 	 % 
 	 
 
-
+For jissenkobo.
